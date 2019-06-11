@@ -1,5 +1,5 @@
 #include <iostream>
-#include "ring.h"
+#include "ring2.h"
 using namespace std;
 
 
@@ -12,6 +12,11 @@ int main() {
   textring.add("three");
   textring.add("four");
   
+    // if this for loop(c++ 98 syntax) works next for loop(c++ 11 syntax) will work too!
+  for(ring<string>::iterator it=textring.begin(); it != textring.end(); it++) {
+     cout << *it << endl;   
+  }
+    cout << endl;
   for (string value : textring) {
        cout << value << endl; 
   }
